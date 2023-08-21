@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketsystem.InvoiceController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: A4F0C9;">
+         <children>
+            <TextField fx:id="id" alignment="CENTER" maxWidth="150.0" prefHeight="35.0" prefWidth="100.0" promptText="Invoice ID" style="-fx-background-radius: 25;" />
+            <TextField fx:id="custName" alignment="CENTER" maxWidth="150.0" prefHeight="35.0" prefWidth="100.0" promptText="Customer Name" style="-fx-background-radius: 25;" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button maxHeight="30.0" maxWidth="70.0" minWidth="50.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" style="-fx-background-radius: 25;" text="Add">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="30.0" maxWidth="70.0" minWidth="50.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" style="-fx-background-radius: 25;" text="Update">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="30.0" maxWidth="70.0" minWidth="50.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" style="-fx-background-radius: 25;" text="Delete">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="InvoiceTable" layoutX="200.0" prefHeight="300.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="idCol" minWidth="120.0" prefWidth="75.0" text="Invoice ID" />
+            <TableColumn fx:id="custNameCol" minWidth="120.0" prefWidth="125.33331298828125" text="Customer Name" />
+            <TableColumn fx:id="dateCol" minWidth="114.66665649414062" prefWidth="114.66665649414062" text="Date" />
+            <TableColumn fx:id="totalCol" minWidth="120.0" prefWidth="75.0" text="Total Balance" />
+            <TableColumn fx:id="netCol" minWidth="120.0" prefWidth="75.0" text="Net Balance" />
+         </columns>
+      </TableView>
+      <Button layoutX="400.0" layoutY="328.0" minWidth="200.0" mnemonicParsing="false" onAction="#addProducts" style="-fx-background-radius: 25;" text="Add Products">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="676.0" layoutY="354.0" minWidth="50.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-radius: 25;" text="Back">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="735.0" layoutY="354.0" minWidth="50.0" mnemonicParsing="false" onAction="#Exit" style="-fx-background-radius: 25;" text="Exit">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

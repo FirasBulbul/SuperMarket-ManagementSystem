@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketsystem.ProductController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: A4F0C9;">
+         <children>
+            <TextField fx:id="name" alignment="CENTER" maxWidth="150.0" prefHeight="35.0" prefWidth="100.0" promptText="Product Name" style="-fx-background-radius: 25;" />
+            <TextField fx:id="serNo" alignment="CENTER" maxWidth="150.0" prefHeight="35.0" prefWidth="100.0" promptText="Serial Number" style="-fx-background-radius: 25;" />
+            <TextField fx:id="quantity" alignment="CENTER" maxWidth="150.0" prefHeight="35.0" prefWidth="100.0" promptText="Quantity" style="-fx-background-radius: 25;" />
+            <TextField fx:id="price" alignment="CENTER" maxHeight="35.0" maxWidth="150.0" prefHeight="35.0" prefWidth="100.0" promptText="Price" style="-fx-background-radius: 25;" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button maxHeight="30.0" maxWidth="70.0" minWidth="50.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" style="-fx-background-radius: 25;" text="Add">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="30.0" maxWidth="70.0" minWidth="50.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" style="-fx-background-radius: 25;" text="Update">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="30.0" maxWidth="70.0" minWidth="50.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" style="-fx-background-radius: 25;" text="Delete">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="productTable" layoutX="200.0" prefHeight="300.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="nameCol" minWidth="120.0" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="serCol" minWidth="120.0" prefWidth="75.0" text="Serial No." />
+            <TableColumn fx:id="catIDCol" minWidth="120.0" prefWidth="75.0" text="Category ID" />
+            <TableColumn fx:id="quantCol" minWidth="120.0" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="priceCol" minWidth="120.0" prefWidth="75.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button layoutX="400.0" layoutY="330.0" minWidth="200.0" mnemonicParsing="false" onAction="#printReport" style="-fx-background-radius: 25;" text="Print Report">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="676.0" layoutY="354.0" minWidth="50.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-radius: 25;" text="Back">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="735.0" layoutY="354.0" minWidth="50.0" mnemonicParsing="false" onAction="#Exit" style="-fx-background-radius: 25;" text="Exit">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
